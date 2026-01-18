@@ -1,4 +1,5 @@
-import { lusitana } from '@/app/ui/fonts';
+// import { lusitana } from '@/app/ui/fonts';
+const lusitana = { className: '' }; // Temporary fallback, replace with actual font import
 import {
   AtSymbolIcon,
   KeyIcon,
