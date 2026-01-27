@@ -1,23 +1,36 @@
 import { GlobeAltIcon } from '@heroicons/react/24/outline';
-import { lusitana } from './fonts';
+import { lusitana, inter } from './fonts';
 import Image from 'next/image';
+import { Inter } from 'next/font/google';
 
 export default function AcmeLogo() {
   return (
     <div
-      className={`${lusitana.className} flex flex-row items-center leading-none text-white`}
+      className={`
+        ${inter.className}
+        flex items-center
+        gap-[4px]   /* tiny, controlled spacing */
+        p-0
+        text-white
+      `}
     >
       <Image
-          src="/logo.png"
-          alt="AGS Student Council Logo"
-          width={48}
-          height={48}
-          className="mr-3"
-        />
-        <div className="mr-3">
-      <p className="text-[44px]">AGS Student Council</p>
-       <p className="text-[18px]">Faith. Knowledge. Service.</p>
-      </div>
+        src="/logo.png"
+        alt="AGS Student Council Logo"
+        width={36}
+        height={36}
+        className="shrink-0"
+      />
+
+      <p
+        className={`
+          ${lusitana.className}
+          text-[38px]
+          leading-tight
+        `}
+      >
+        Council
+      </p>
     </div>
   );
 }
